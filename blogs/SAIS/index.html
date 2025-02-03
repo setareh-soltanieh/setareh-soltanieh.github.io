@@ -137,29 +137,37 @@
 	</center>
         
     <h4>
-    Decoding surgeon activity from surgical videos
+    Data Capturing
     </h4>
         <p>
-        In our most recent research, published in <a href="https://www.nature.com/articles/s41551-023-01010-8" style="color:#0e8ec9;"><u>Nature Biomedical Engineering</u></a>, we decode surgeon activity from surgical videos through the use of artificial intelligence (AI).
-        The use of artificial intelligence implies that the decoding of surgeon activity is objective (read: does not depend on the subjective interpretation of a surgeon), reliable (read: consistently provides the correct decoding), and scalable (read: does not require the presence of a surgeon). 
-        These qualities suggest that our AI system, which we refer to as SAIS, should be broadly applicable.
+        In this module, input data—including monocular camera frames and IMU measurements—are captured.
+            The camera operates at 30Hz, while the IMU records data at 400Hz.
+            To ensure reliable localization, both data sources must maintain stable frequencies, as missing camera frames can cause the algorithm to fail.
         </p>
-								
-		<h4>
-    Decoding the steps of surgery
+
+    <h4>
+    Setting the Origin
     </h4>
-      <h5>
-      Can we reliably distinguish between surgical steps?  
-      </h5>	
+      <p>
+      In this module, the origins of the real and virtual worlds are aligned.
+          In AR applications, the device's initial pose is typically set as the origin, with all subsequent poses calculated relative to it.
+          In this pipeline, an AprilTag serves as the common reference point for both worlds.
+          At the start of the application, users scan the AprilTag, allowing the AR system to align its origin with the tag's position, ensuring accurate placement of virtual objects.
+      </p>
+
+    <h4>
+    Localization
+    </h4>
         <p>
-        We trained SAIS to distinguish between three surgical steps: needle handling, needle driving, and needle withdrawal. 
-        These reflect periods of time during which a surgeon first handles a needle to drive it through some tissue before withdrawing it as part of the suturing process. 
-        Specifically, to probe SAIS' ability to generalize (read: perform well) to real-world data from different settings, we trained it on data exclusively from the University of Southern California (USC) and deployed it on previously-unseen videos from USC and from completely different hospitals: St. Antonius Hospital, Germany (SAH) and Houston Methodist Hospital, USA (HMH).
+        In this pipeline I used five state-of-the-art mono-inertial localization algorithms including: VINS-Mono, ORBSLAM3, Open-VINS, Kimera, and DM-VIO.
         </p>
-        
+
+    <h4>
+    Rendering
+    </h4>
         <p>
-        We show that SAIS generalizes to unseen surgical videos and those from unseen surgeons at different hospitals. 
-        While the former is evident by the strong performance (AUC > 0.90) achieved when SAIS was deployed on USC data, the latter is supported by the strong performance (AUC > 0.85) when SAIS was deployed on data from SAH and HMH. 
+        In this pipeline a virtual cube has been rendered on the screen.
+            This rendering is being conducted using OpenCV. At first the algorithm estimates whether or not the virutal
         </p>
 				
 		<center>
