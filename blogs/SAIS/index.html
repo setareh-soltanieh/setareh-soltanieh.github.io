@@ -202,9 +202,9 @@
                 In this photo, the cube’s center is positioned at (60, 26).</figcaption>
         </figure>
 				
-		<h4>
+		<p>
         For the outdoor environments, I have placed the virtual cube at (0, 0) and (0, 5) locations.
-        </h4>
+        </p>
         <video width="100%" controls>
             <source src="./videos/Outdoor_0_0.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -216,80 +216,80 @@
         </video>
 
       <h5>
-      Can we reliably distinguish between low and high skill activity?  
+      Using this AR pipeline, we can reliably pre-position virtual objects in the environment.
       </h5>	
-        <p>
-        We then trained SAIS to distinguish between low and high skill activity, for two distinct surgical activities: needle handling and needle driving.
-        For needle handling, a low-skill assessment is based on the number of times a surgeon had to reposition their grasp of the needle (more repositions = lower quality). 
-        For needle driving, a low-skill assessment is based on the smoothness with which it was performed (less smooth = lower quality). 
-        </p>
-        <p>
-        We show that SAIS generalizes to unseen videos, surgeons, and hospitals. 
-        This is evident by its strong performance (AUC > 0.80) across the skill assessment tasks and hospitals.  
-        SAIS also naturally lends itself to explainable findings. 
-        Below, we illustrate the relative importance of individual frames in a surgical video, as identified by SAIS, and
-        show that the frames with the highest level of importance do indeed align with the ground-truth low-skill assessment of the surgical activity.
-        </p>
-			
-		<center>
-		<img src="./images/skills_assessment.jpg" width="80%" /> 									
-		</center>
-				
-		<h4>
-    Combining the elements of surgery
-    </h4>		
-      <h5>
-      How do we practically leverage the findings of this study?  
-      </h5>	
-        <p>
-        Thus far, we have demonstrated SAIS' ability to independently decode multiple elements of surgical activity (steps, gestures, and skill-levels). 
-        Considering these elements in unison, however, suggests that SAIS can provide a surgeon with performance feedback of the following form: 
-        </p>
+<!--        <p>-->
+<!--        We then trained SAIS to distinguish between low and high skill activity, for two distinct surgical activities: needle handling and needle driving.-->
+<!--        For needle handling, a low-skill assessment is based on the number of times a surgeon had to reposition their grasp of the needle (more repositions = lower quality). -->
+<!--        For needle driving, a low-skill assessment is based on the smoothness with which it was performed (less smooth = lower quality). -->
+<!--        </p>-->
+<!--        <p>-->
+<!--        We show that SAIS generalizes to unseen videos, surgeons, and hospitals. -->
+<!--        This is evident by its strong performance (AUC > 0.80) across the skill assessment tasks and hospitals.  -->
+<!--        SAIS also naturally lends itself to explainable findings. -->
+<!--        Below, we illustrate the relative importance of individual frames in a surgical video, as identified by SAIS, and-->
+<!--        show that the frames with the highest level of importance do indeed align with the ground-truth low-skill assessment of the surgical activity.-->
+<!--        </p>-->
+<!--			-->
+<!--		<center>-->
+<!--		<img src="./images/skills_assessment.jpg" width="80%" /> 									-->
+<!--		</center>-->
 
-        <p style="background-color: #eff5fb; padding: 10px; border: 1px solid blue;">
-        When completing stitch number 3 of the suturing step, your needle handling (what - <i>sub-phase</i>) was executed poorly (how - <i>skill</i>). 
-        This is likely due to your activity in the first and final quarters of the needle handling sub-phase (why - <i>explanation</i>). 
-        </p>
+<!--		<h4>-->
+<!--    Combining the elements of surgery-->
+<!--    </h4>		-->
+<!--      <h5>-->
+<!--      How do we practically leverage the findings of this study?  -->
+<!--      </h5>	-->
+<!--        <p>-->
+<!--        Thus far, we have demonstrated SAIS' ability to independently decode multiple elements of surgical activity (steps, gestures, and skill-levels). -->
+<!--        Considering these elements in unison, however, suggests that SAIS can provide a surgeon with performance feedback of the following form: -->
+<!--        </p>-->
 
-        <p>
-        Such granular and temporally-localized feedback allows a surgeon to better focus on the element of surgery that requires improvement. 
-        As such, a surgeon can now better identify, and learn to avoid, problematic intra-operative surgical behaviour in the future.
-        </p>					
+<!--        <p style="background-color: #eff5fb; padding: 10px; border: 1px solid blue;">-->
+<!--        When completing stitch number 3 of the suturing step, your needle handling (what - <i>sub-phase</i>) was executed poorly (how - <i>skill</i>). -->
+<!--        This is likely due to your activity in the first and final quarters of the needle handling sub-phase (why - <i>explanation</i>). -->
+<!--        </p>-->
 
-		<h4>
-    Outlining the translational impact
-    </h4>		
-      <h5>
-      What are the implications of our study?
-      </h5>	
-        <p>
-        The ability of SAIS to generalize to videos across a wide range of settings (e.g., surgeons, hospitals, and surgical procedures) is likely to instill surgeons with greater confidence in its performance. 
-        This opens the door for the large-scale decoding of the millions of surgical videos recorded on an annual basis. 
-        Moreover, SAIS' ability to provide explainable findings, by highlighting relevant video frames, has a threefold benefit. 
-        First, explainability can improve the trustworthiness of an AI system, a critical pre-requisite for clinical adoption. 
-        Second, it allows for the provision of more targeted feedback to surgeons about their performance, thereby allowing them to modulate their behaviour to improve patient outcomes.
-        Third, explainability can improve the transparency of an AI system, and thus contributes to the ethical deployment of AI systems in a clinical setting.
-        </p>
-				
-		<h4>
-    Moving forward
-    </h4>		
-      <h5>
-      Where do we go from here?  
-      </h5>	
-        <p>
-        Beyond demonstrating the reliability of SAIS on data from distinct settings, it is critical that we also explore the ethical implications of its deployment.
-	To that end, in a concurrent study published in <a href="https://www.nature.com/articles/s41746-023-00766-2" style="color:#0e8ec9;"><u>npj Digital Medicine</u></a>, we explore the fairness of SAIS' skill assessments and whether it disadvantages one surgeon subcohort over another.
-        One way to leverage SAIS is for the provision of surgeon feedback, and we see its explanations playing a critical role in that process. 
-	As such, in a concurrent study published in <a href="https://www.nature.com/articles/s43856-023-00263-3" style="color:#0e8ec9;"><u>Communications Medicine</u></a>, we systematically investigate the quality and fairness of SAIS' explanations. 
-        </p>
-				
-		<h4>
-		Acknowledgements
-		</h4>
-		<p>  
-		We would like to thank <a id='overwhite' href="https://www.youtube.com/watch?v=ZFkV6mwHhX0" style="color:#0e8ec9;"><u>Wadih El Safi</u></a> for lending us his voice. 
-		</p>
+<!--        <p>-->
+<!--        Such granular and temporally-localized feedback allows a surgeon to better focus on the element of surgery that requires improvement. -->
+<!--        As such, a surgeon can now better identify, and learn to avoid, problematic intra-operative surgical behaviour in the future.-->
+<!--        </p>					-->
+
+<!--		<h4>-->
+<!--    Outlining the translational impact-->
+<!--    </h4>		-->
+<!--      <h5>-->
+<!--      What are the implications of our study?-->
+<!--      </h5>	-->
+<!--        <p>-->
+<!--        The ability of SAIS to generalize to videos across a wide range of settings (e.g., surgeons, hospitals, and surgical procedures) is likely to instill surgeons with greater confidence in its performance. -->
+<!--        This opens the door for the large-scale decoding of the millions of surgical videos recorded on an annual basis. -->
+<!--        Moreover, SAIS' ability to provide explainable findings, by highlighting relevant video frames, has a threefold benefit. -->
+<!--        First, explainability can improve the trustworthiness of an AI system, a critical pre-requisite for clinical adoption. -->
+<!--        Second, it allows for the provision of more targeted feedback to surgeons about their performance, thereby allowing them to modulate their behaviour to improve patient outcomes.-->
+<!--        Third, explainability can improve the transparency of an AI system, and thus contributes to the ethical deployment of AI systems in a clinical setting.-->
+<!--        </p>-->
+<!--				-->
+<!--		<h4>-->
+<!--    Moving forward-->
+<!--    </h4>		-->
+<!--      <h5>-->
+<!--      Where do we go from here?  -->
+<!--      </h5>	-->
+<!--        <p>-->
+<!--        Beyond demonstrating the reliability of SAIS on data from distinct settings, it is critical that we also explore the ethical implications of its deployment.-->
+<!--	To that end, in a concurrent study published in <a href="https://www.nature.com/articles/s41746-023-00766-2" style="color:#0e8ec9;"><u>npj Digital Medicine</u></a>, we explore the fairness of SAIS' skill assessments and whether it disadvantages one surgeon subcohort over another.-->
+<!--        One way to leverage SAIS is for the provision of surgeon feedback, and we see its explanations playing a critical role in that process. -->
+<!--	As such, in a concurrent study published in <a href="https://www.nature.com/articles/s43856-023-00263-3" style="color:#0e8ec9;"><u>Communications Medicine</u></a>, we systematically investigate the quality and fairness of SAIS' explanations. -->
+<!--        </p>-->
+<!--				-->
+<!--		<h4>-->
+<!--		Acknowledgements-->
+<!--		</h4>-->
+<!--		<p>  -->
+<!--		We would like to thank <a id='overwhite' href="https://www.youtube.com/watch?v=ZFkV6mwHhX0" style="color:#0e8ec9;"><u>Wadih El Safi</u></a> for lending us his voice. -->
+<!--		</p>-->
 				
 		</br>
 							
