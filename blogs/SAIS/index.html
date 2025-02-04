@@ -169,31 +169,38 @@
         In this pipeline a virtual cube has been rendered on the screen.
             This rendering is being conducted using OpenCV. At first the algorithm estimates whether or not the virutal
         </p>
-				
-		<center>
-		<img src="./images/subphase_recognition.jpg" width="100%" /> 									
-		</center>					
-								
-		<h4>
-    Decoding the gestures of surgery
+
+    <h4>
+    Results
     </h4>
       <h5>
-      Can we reliably distinguish between surgical gestures?  
+      This pipeline has been tested for both indoor and outdoor environments.
       </h5>	
         <p>
-        We also trained SAIS to distinguish between distinct gestures performed by surgeons. 
-        These reflect the decisions made by a surgeon about how to execute a particular surgical step. 
-        To emphasize again, SAIS was trained on data exclusively from USC and deployed on unseen videos of the same surgery (RARP) from USC and SAH. 
-        In this setting, we also deployed SAIS on videos from an entirely different surgical procedure, known as a <a id='overwhite' href="https://my.clevelandclinic.org/health/treatments/17445-robotic-partial-nephrectomy" style="color:#0e8ec9;"><u>robot-assisted partial nephrectomy</u></a> (RAPN), in which a portion of a patient's kidney is removed to treat cancer.
-        </p>
-        <p>
-        We show that SAIS generalizes to unseen videos, surgeons, hospitals, and surgical procedures. 
-        This is evident by its strong performance (see below) in all of these settings. 
+        For the indoor environments, I place the virtual cube at three different locations on a grid.
+            As it is shown in the following Figures, the virtual cube is placed in (10, 2), (16, 14), and (60, 26).
         </p>
 			
-		<center>
-		<img src="./images/gesture_classification.jpg" width="100%" /> 									
-		</center>
+<!--		<center>-->
+<!--		<img src="./images/AR_demo_1.png" width="100%" />-->
+<!--		</center>-->
+        <figure>
+            <img src="./images/AR_demo_1.png" width="100%" alt="Augmented Reality Demo 1">
+            <figcaption>The first demonstration of the AR experience.
+                In this photo, the cube’s center is positioned at (10, 2).</figcaption>
+        </figure>
+
+        <figure>
+            <img src="./images/AR_demo_1.png" width="100%" alt="Augmented Reality Demo 2">
+            <figcaption>The first demonstration of the AR experience.
+                In this photo, the cube’s center is positioned at (16, 14).</figcaption>
+        </figure>
+
+        <figure>
+            <img src="./images/AR_demo_1.png" width="100%" alt="Augmented Reality Demo 3">
+            <figcaption>The first demonstration of the AR experience.
+                In this photo, the cube’s center is positioned at (60, 26).</figcaption>
+        </figure>
 				
 		<h4>
     Decoding the skill-level of surgical activity
