@@ -113,12 +113,11 @@
     Enhancing Public Engagement in Urban Planning with AR
     </h4>    
         <p>
-        A compelling example of pre-positioning virtual assets is the visualization of proposed urban buildings at their intended locations.
-            Architects often struggle with securing permits and managing public feedback, which can lead to costly delays or cancellations.
-            Traditional methods like signage and 2D renders fail to effectively engage the public, whereas AR enables municipalities to showcase the final design in real-world settings.
-            This immersive experience helps stakeholders better understand the project’s impact.
-            However, relying on pre-generated 3D maps for positioning is impractical in evolving environments like construction sites.
-            Instead, using visual fiducial markers, such as AprilTags, offers a more adaptable solution, though challenges like high pedestrian and vehicle traffic must be considered to ensure accurate placement.
+        Pre-positioning virtual objects in augmented reality (AR) is crucial for applications like urban planning, where stakeholders need to visualize proposed structures within existing environments.
+            Traditional methods, such as signage and 2D renders, often fail to engage the public effectively.
+            AR offers an immersive experience, allowing municipalities to showcase final designs in real-world settings, thereby enhancing public understanding and feedback.
+            However, positioning virtual objects accurately in dynamic environments, like construction sites, presents challenges.
+            Instead of relying on pre-generated 3D maps, using visual fiducial markers, such as AprilTags, provides a more adaptable solution, though considerations like high pedestrian and vehicle traffic must be addressed to ensure precise placement.
         </p>
         
     <h4>
@@ -129,8 +128,7 @@
             In this approach, users can view the virtual objects but cannot move them.
             The pipeline consists of four main modules: data capture, setting the origin, localization, and rendering.
             Each module plays a crucial role in ensuring precise alignment of virtual assets with the physical environment.
-            This process is illustrated in the figure below.
-        </p>
+            This process is illustrated in the figure below.</p>
 
     <center>
 	<img src="./images/AR_pipeline.png" style="width: 60%" />
@@ -140,16 +138,15 @@
     Data Capturing
     </h4>
         <p>
-        In this module, input data—including monocular camera frames and IMU measurements—are captured.
+        In this module, input data—including monocular camera frames and Inertial Measurement Unit (IMU) measurements—are captured.
             The camera operates at 30Hz, while the IMU records data at 400Hz.
-            To ensure reliable localization, both data sources must maintain stable frequencies, as missing camera frames can cause the algorithm to fail.
-        </p>
+            To ensure reliable localization, both data sources must maintain stable frequencies, as missing camera frames can cause the algorithm to fail.</p>
 
     <h4>
     Setting the Origin
     </h4>
       <p>
-      In this module, the origins of the real and virtual worlds are aligned.
+      Aligning the origins of the real and virtual worlds is essential.
           In AR applications, the device's initial pose is typically set as the origin, with all subsequent poses calculated relative to it.
           In this pipeline, an AprilTag serves as the common reference point for both worlds.
           At the start of the application, users scan the AprilTag, allowing the AR system to align its origin with the tag's position, ensuring accurate placement of virtual objects.
@@ -166,44 +163,44 @@
     Rendering
     </h4>
         <p>
-        In this pipeline a virtual cube has been rendered on the screen.
-            This rendering is being conducted using OpenCV. At first the algorithm estimates whether or not the virutal
+        A virtual cube is rendered on the screen using OpenCV.
+            Initially, the algorithm estimates whether the virtual object is within the camera's field of view and then proceeds with rendering.
         </p>
 
     <h4>
     Results
     </h4>
-      <h5>
-      This pipeline has been tested for both indoor and outdoor environments.
-      </h5>
-        <p>
-        For the indoor environments, I place the virtual cube at three different locations on a grid.
-            As it is shown in the following Figures, the virtual cube is placed in (10, 2), (16, 14), and (60, 26).
-        </p>
-			
-<!--		<center>-->
-<!--		<img src="./images/AR_demo_1.png" width="100%" />-->
-<!--		</center>-->
-        <figure>
-            <img src="./images/AR_demo_1.png" width="60%" alt="Augmented Reality Demo 1">
-            <figcaption>The first demonstration of the AR experience.
-                In this photo, the cube’s center is positioned at (10, 2).</figcaption>
-        </figure>
+      <p>
+      The pipeline has been tested in both indoor and outdoor environments.
+      </p>
+    <h5>
+    Indoor Environments
+    </h5>
+    <p>
+        The virtual cube was placed at three different locations on a grid: (10, 2), (16, 14), and (60, 26). The following images demonstrate these placements:
+    </p>
 
-        <figure>
+    <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <img src="./images/AR_demo_1.png" width="60%" alt="Augmented Reality Demo 1">
+        <figcaption>The first demonstration of the AR experience. In this photo, the cube’s center is positioned at (10, 2).</figcaption>
+    </figure>
+
+        <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
             <img src="./images/AR_demo_2.png" width="60%" alt="Augmented Reality Demo 2">
             <figcaption>The first demonstration of the AR experience.
                 In this photo, the cube’s center is positioned at (16, 14).</figcaption>
         </figure>
 
-        <figure>
+        <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
             <img src="./images/AR_demo_3.png" width="60%" alt="Augmented Reality Demo 3">
             <figcaption>The first demonstration of the AR experience.
                 In this photo, the cube’s center is positioned at (60, 26).</figcaption>
         </figure>
-				
+        <h6>
+        Outdoor Environments
+        </h6>
 		<p>
-        For the outdoor environments, I have placed the virtual cube at (0, 0) and (0, 5) locations.
+        The virtual cube was placed at coordinates (0, 0) and (0, 5). The following videos demonstrate these placements:
         </p>
         <video width="60%" controls>
             <source src="./video/Outdoor_0_0.mp4" type="video/mp4">
@@ -216,7 +213,7 @@
         </video>
 
       <p>
-      Using this AR pipeline, we can reliably pre-position virtual objects in the environment.
+      Using this AR pipeline, we can reliably pre-position virtual objects in various environments, enhancing applications like urban planning by providing stakeholders with a tangible sense of proposed developments.
       </p>
 <!--        <p>-->
 <!--        We then trained SAIS to distinguish between low and high skill activity, for two distinct surgical activities: needle handling and needle driving.-->
