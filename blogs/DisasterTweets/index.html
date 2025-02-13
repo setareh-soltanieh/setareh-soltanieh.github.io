@@ -97,8 +97,24 @@
                     <p>
                         Model Selection: I trained a RidgeClassifier, a linear model that is well-suited for text classification tasks due to its ability to handle high-dimensional sparse data efficiently. Ridge regression helps prevent overfitting by applying L2 regularization, making it a robust choice for this problem.
                     </p>
+					<p>
                     Despite its simplicity, this approach yielded a solid baseline score of 0.78057, demonstrating that even basic NLP techniques can provide competitive results in disaster tweet classification.
-                </div>
+                	</p>
+					<a href="https://www.kaggle.com/code/setarehsoltanieh/disastertweets" target="_blank">View my Kaggle Notebook</a>
+					<p>
+						For my next attempt, I refined my approach and achieved an improved score of 0.80049 by making a key change in feature extraction.
+					</p>
+					<p>
+						Feature Extraction: Instead of CountVectorizer, I used TfidfVectorizer (Term Frequency-Inverse Document Frequency), another bag-of-words technique that assigns importance to words based on their frequency in a document relative to their occurrence in the entire dataset. This method downweights common words like "is" and "are" while emphasizing more meaningful words that contribute to distinguishing disaster-related tweets.
+					</p>
+					<p>
+						Model Selection: I continued using RidgeClassifier, as it had performed well in my previous attempt. By simply switching to TF-IDF features, the model learned a better representation of the text, leading to a noticeable improvement in performance.
+					</p>
+					<p>
+						This small yet effective change boosted my score to 0.80049, demonstrating the impact of better feature engineering in NLP tasks.
+					</p>
+
+				</div>
             </section>
         </article>
     </div>
