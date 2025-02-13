@@ -83,54 +83,22 @@
         <article id="main">
             <section class="wrapper style5">
                 <div class="inner">
-                    <h2 class="text-center">Anchoring Virtual Objects to Specific Cards</h2>
+                    <h2 class="text-center">Disaster Tweet Classification: Identifying Real Crisis Events from Social Media</h2>
                     <p class="text-center"><strong>By Setareh Soltanieh</strong></p>
                     <h4>Visualizing Different AR Assets on Playing Cards</h4>
                     <p>
-                        This project demonstrates how to anchor virtual objects to specific playing cards using Unity's <code>ARTrackedImageManager</code>.
-                        The application, developed for Android, enables users to see a virtual robot appear on the Queen of Hearts and a virtual house on the Jack of Hearts when viewed through the device’s camera.
+                        This project explores Natural Language Processing (NLP) techniques to classify tweets as either real disaster-related messages or unrelated content. Using the "NLP Getting Started" dataset from Kaggle, which contains over 10,000 labeled tweets, the model is trained to distinguish between emergency-related and non-critical information.
                     </p>
-                    <h4>How It Works</h4>
-                    <ol>
-                        <li>Download and install the application (.apk file linked below).</li>
-                        <li>Grant camera permissions when prompted.</li>
-                        <li>Point your device at the provided playing card images.</li>
-                        <li>Watch as the corresponding AR object appears on the screen.</li>
-                    </ol>
-                    <h4>Demonstration</h4>
-                    <div style="text-align: center;">
-                        <video width="30%" controls>
-                            <source src="./video/Cards_app.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <h4>Try It Yourself</h4>
                     <p>
-                        Click below to download the application:
+                        For my first attempt, which achieved a score of 0.78057, I took a straightforward yet effective approach to classifying disaster-related tweets.
                     </p>
-                    <p><a href="https://drive.google.com/uc?export=download&id=16Zfdb3h5ho5IDpaicG8ACpi_50V-iguJ" class="button">Download APK</a></p>
-                    <h4>Test with These Cards</h4>
-                    <p>After installing, point your camera at the following images:</p>
-                    <div class="column">
-                        <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                            <img src="./images/q_hearts.jpg" width="40%" alt="Queen of Hearts">
-                            <figcaption>Queen of Hearts (Virtual Robot)</figcaption>
-                        </figure>
-                    </div>
-                    <div class="column">
-                        <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                            <img src="./images/j_hearts.jpg" width="40%" alt="Jack of Hearts">
-                            <figcaption>Jack of Hearts (Virtual House)</figcaption>
-                        </figure>
-                    </div>
-
-
-                    <h4>Conclusion</h4>
-
                     <p>
-                        This project highlights the potential of AR for interactive applications in gaming, education, and beyond.
-                        By linking virtual objects to real-world images, AR provides an engaging and immersive user experience.
+                        Feature Extraction: I used CountVectorizer, a simple yet powerful bag-of-words technique, to transform the raw text into numerical features. This method counts the frequency of each word in the training set and applies the same tokenization process to the test set, ensuring consistency in feature representation.
                     </p>
+                    <p>
+                        Model Selection: I trained a RidgeClassifier, a linear model that is well-suited for text classification tasks due to its ability to handle high-dimensional sparse data efficiently. Ridge regression helps prevent overfitting by applying L2 regularization, making it a robust choice for this problem.
+                    </p>
+                    Despite its simplicity, this approach yielded a solid baseline score of 0.78057, demonstrating that even basic NLP techniques can provide competitive results in disaster tweet classification.
                 </div>
             </section>
         </article>
