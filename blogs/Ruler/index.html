@@ -83,52 +83,50 @@
         <article id="main">
             <section class="wrapper style5">
                 <div class="inner">
-                    <h2 class="text-center">Anchoring Virtual Objects to 3D maps</h2>
+                    <h2 class="text-center">Distance Measurement AR Application</h2>
                     <p class="text-center"><strong>By Setareh Soltanieh</strong></p>
                     <h4>Introduction</h4>
                     <p>
-                        This project is an augmented reality (AR) application called <strong>Halloween AR</strong>.
-                        The goal is to anchor virtual Halloween-themed objects in a 3D map of my environment,
-                        allowing users to experience an interactive AR scene when they launch the app.
+                        This project is an augmented reality (AR) application designed to measure the distance between two points in a real-world environment.
+                        Using AR technology, users can interactively specify two points and visualize the measured distance directly within their surroundings.
                     </p>
-                     <h4>How It Works</h4>
+
+                    <h4>How It Works</h4>
                     <p>
-                        1. I created a <strong>3D map</strong> of my environment using Vuforia.
+                        1. The user scans the environment to detect flat surfaces.
                         <br>
-                        2. I converted the generated map into a format that Unity could read.
+                        2. The user selects one endpoint by sending a raycast and placing a sphere at that location.
                         <br>
-                        3. Inside Unity, I placed virtual Halloween-themed objects into the mapped environment.
+                        3. The second endpoint is specified by the user touching the screen, placing another sphere.
                         <br>
-                        4. When users run the application, they see these virtual objects correctly positioned in the real world.
+                        4. A line is drawn between the two spheres, and the distance is displayed along the line.
                     </p>
+
                     <h4>Video Demonstration</h4>
                     <div class="text-center">
                         <video width="70%" controls>
-                            <source src="./video/video_1.mp4" type="video/mp4">
+                            <source src="distance_measurement_demo.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                     <h4>Try It Yourself</h4>
                     <p>
-                        This application utilizes a pre-generated 3D map of the kitchen environment in Queen's University's Ingenuity Labs.
-                        If you are present in that location, click below to download the application:
+                        Click below to download the application:
                     </p>
-                    <p><a href="https://drive.google.com/file/d/17fokbYga0FIVLTr6fIL1Qqzh42Yv4mgJ/view?usp=sharing" class="button">Download APK</a></p>
+                    <p><a href="https://drive.google.com/file/d/1jFQT4GIM4g3nINN0i-W2ibCcWC8kG64-/view?usp=sharing" class="button">Download APK</a></p>
 
                     <h4>Technologies Used</h4>
                     <ul>
-                        <li>Vuforia (for 3D environment mapping)</li>
+                        <li>AR Foundation (for environment scanning and tracking)</li>
                         <li>Unity (for rendering and interaction)</li>
-                        <li>C# (for scripting behavior in Unity)</li>
+                        <li>C# (for scripting logic)</li>
                         <li>Android/iOS (for deployment)</li>
                     </ul>
 
                     <h4>Conclusion</h4>
                     <p>
-                        This project demonstrates how augmented reality can be used to place and interact with virtual objects
-                        in a real-world space.
+                        This application demonstrates how augmented reality can be used to measure distances accurately in a real-world space.
                     </p>
-
                 </div>
             </section>
         </article>
