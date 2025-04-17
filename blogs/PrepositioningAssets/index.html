@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by Pixelarity
+	pixelarity.com @pixelarity
+	License: pixelarity.com/license
+-->
+<html>
+	<head>
+		<link rel="icon" href="">
+		<title>Setareh Soltanieh| Blog - SAIS </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                               tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+                               });
+        </script>
+        <script type="text/javascript"
+  			src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-97381584-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+
+		<style>
+		* {
+		  box-sizing: border-box;
+		}
+
+		.column {
+		  float: left;
+		  width: 50%;
+		  padding: 5px;
+		}
+
+		/* Clearfix (clear floats) */
+		.row::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+		</style>
+		
+		
+
+	</head>
+  
+  
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../../index.html">Setareh Soltanieh</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="../../index.html">Home</a></li>
+											<li><a href="../../index.html#aboutme">About Me</a></li>
+											<li><a href="../../index.html#experience">Experience</a></li>
+											<li>&mdash;</li>
+											<li><a href="../../publications.html">Projects</a></li>
+<!--											<li><a href="../index.html">Blog</a></li>-->
+<!--											<li><a href="../../datasets.html">Datasets</a></li>											-->
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+	<!-- Main -->
+	<article id="main">
+		<section class="wrapper style5">
+
+			<div class="inner">
+			<h2>
+			<center>
+				Pre-positioning virtual objects at their intended locations in the real world environment
+			</center>
+			</h2>
+
+<!--			<p>-->
+<!--			<center>-->
+<!--				Thursday, March 30th, 2023-->
+<!--			</center>-->
+<!--			</p>-->
+
+			<p>
+			<center>
+				Setareh Soltanieh
+			</center>
+			</p>
+
+    <h4>
+    Enhancing Public Engagement in Urban Planning with AR
+    </h4>    
+        <p>
+        Pre-positioning virtual objects in augmented reality (AR) is crucial for applications like urban planning, where stakeholders need to visualize proposed structures within existing environments.
+            Traditional methods, such as signage and 2D renders, often fail to engage the public effectively.
+            AR offers an immersive experience, allowing municipalities to showcase final designs in real-world settings, thereby enhancing public understanding and feedback.
+            However, positioning virtual objects accurately in dynamic environments, like construction sites, presents challenges.
+            Instead of relying on pre-generated 3D maps, using visual fiducial markers, such as AprilTags, provides a more adaptable solution, though considerations like high pedestrian and vehicle traffic must be addressed to ensure precise placement.
+        </p>
+        
+    <h4>
+    AR Pipeline for Pre-Positioning Virtual Objects
+    </h4>
+        <p>
+        I have developed an AR pipeline that accurately pre-positions virtual objects at their intended locations in the real world.
+            In this approach, users can view the virtual objects but cannot move them.
+            The pipeline consists of four main modules: data capture, setting the origin, localization, and rendering.
+            Each module plays a crucial role in ensuring precise alignment of virtual assets with the physical environment.
+            This process is illustrated in the figure below.</p>
+
+    <center>
+	<img src="./images/AR_pipeline.png" style="width: 60%" />
+	</center>
+        
+    <h4>
+    Data Capturing
+    </h4>
+        <p>
+        In this module, input data—including monocular camera frames and Inertial Measurement Unit (IMU) measurements—are captured.
+            The camera operates at 30Hz, while the IMU records data at 400Hz.
+            To ensure reliable localization, both data sources must maintain stable frequencies, as missing camera frames can cause the algorithm to fail.</p>
+
+    <h4>
+    Setting the Origin
+    </h4>
+      <p>
+      Aligning the origins of the real and virtual worlds is essential.
+          In AR applications, the device's initial pose is typically set as the origin, with all subsequent poses calculated relative to it.
+          In this pipeline, an AprilTag serves as the common reference point for both worlds.
+          At the start of the application, users scan the AprilTag, allowing the AR system to align its origin with the tag's position, ensuring accurate placement of virtual objects.
+      </p>
+
+    <h4>
+    Localization
+    </h4>
+        <p>
+        In this pipeline I used five state-of-the-art mono-inertial localization algorithms including: VINS-Mono, ORBSLAM3, Open-VINS, Kimera, and DM-VIO.
+        </p>
+
+    <h4>
+    Rendering
+    </h4>
+        <p>
+        A virtual cube is rendered on the screen using OpenCV.
+            Initially, the algorithm estimates whether the virtual object is within the camera's field of view and then proceeds with rendering.
+        </p>
+
+    <h4>
+    Results
+    </h4>
+      <p>
+      The pipeline has been tested in both indoor and outdoor environments.
+      </p>
+    <h5>
+    Indoor Environments
+    </h5>
+    <p>
+        The virtual cube was placed at three different locations on a grid: (10, 2), (16, 14), and (60, 26). The following images demonstrate these placements:
+    </p>
+
+    <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <img src="./images/AR_demo_1.png" width="60%" alt="Augmented Reality Demo 1">
+        <figcaption>The first demonstration of the AR experience. In this photo, the cube’s center is positioned at (10, 2).</figcaption>
+    </figure>
+
+        <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <img src="./images/AR_demo_2.png" width="60%" alt="Augmented Reality Demo 2">
+            <figcaption>The first demonstration of the AR experience.
+                In this photo, the cube’s center is positioned at (16, 14).</figcaption>
+        </figure>
+
+        <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <img src="./images/AR_demo_3.png" width="60%" alt="Augmented Reality Demo 3">
+            <figcaption>The first demonstration of the AR experience.
+                In this photo, the cube’s center is positioned at (60, 26).</figcaption>
+        </figure>
+        <h6>
+        Outdoor Environments
+        </h6>
+		<p>
+        The virtual cube was placed at coordinates (0, 0) and (0, 5). The following videos demonstrate these placements:
+        </p>
+        <div style="text-align: center;">
+            <video width="60%" controls>
+            <source src="./video/Outdoor_0_0.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </div>
+        <div style="text-align: center;">
+        <video width="60%" controls>
+            <source src="./video/Outdoor_0_5.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        </div>
+
+      <p>
+      Using this AR pipeline, we can reliably pre-position virtual objects in various environments, enhancing applications like urban planning by providing stakeholders with a tangible sense of proposed developments.
+      </p>
+		</br>
+							
+					</div>
+				</section>
+			</article>
+    
+		
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../../assets/js/skel.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../../assets/js/main.js"></script>
+				
+				
+  	</body>
+	
+</html>

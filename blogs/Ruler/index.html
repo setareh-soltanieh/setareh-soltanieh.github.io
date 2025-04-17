@@ -1,0 +1,143 @@
+-->
+<html>
+	<head>
+		<link rel="icon" href="">
+		<title>Setareh Soltanieh| Blog - SAIS </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                               tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+                               });
+        </script>
+        <script type="text/javascript"
+  			src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-97381584-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+
+		<style>
+		* {
+		  box-sizing: border-box;
+		}
+
+		.column {
+		  float: left;
+		  width: 50%;
+		  padding: 5px;
+		}
+
+		/* Clearfix (clear floats) */
+		.row::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+		</style>
+
+
+
+	</head>
+
+
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../../index.html">Setareh Soltanieh</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="../../index.html">Home</a></li>
+											<li><a href="../../index.html#aboutme">About Me</a></li>
+											<li><a href="../../index.html#experience">Experience</a></li>
+											<li>&mdash;</li>
+											<li><a href="../../publications.html">Projects</a></li>
+<!--											<li><a href="../index.html">Blog</a></li>-->
+<!--											<li><a href="../../datasets.html">Datasets</a></li>-->
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+        <article id="main">
+            <section class="wrapper style5">
+                <div class="inner">
+                    <h2 class="text-center">Distance Measurement AR Application</h2>
+                    <p class="text-center"><strong>By Setareh Soltanieh</strong></p>
+                    <h4>Introduction</h4>
+                    <p>
+                        This project is an augmented reality (AR) application designed to measure the distance between two points in a real-world environment.
+                        Using AR technology, users can interactively specify two points and visualize the measured distance directly within their surroundings.
+                    </p>
+
+                    <h4>How It Works</h4>
+                    <p>
+                        1. The user scans the environment to detect flat surfaces.
+                        <br>
+                        2. The user selects one endpoint by sending a raycast and placing a sphere at that location.
+                        <br>
+                        3. The second endpoint is specified by the user touching the screen, placing another sphere.
+                        <br>
+                        4. A line is drawn between the two spheres, and the distance is displayed along the line.
+                    </p>
+
+                    <h4>Video Demonstration</h4>
+                    <div class="text-center">
+                        <video width="70%" controls>
+                            <source src="distance_measurement_demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h4>Try It Yourself</h4>
+                    <p>
+                        Click below to download the application:
+                    </p>
+                    <p><a href="https://drive.google.com/file/d/1jFQT4GIM4g3nINN0i-W2ibCcWC8kG64-/view?usp=sharing" class="button">Download APK</a></p>
+
+                    <h4>Technologies Used</h4>
+                    <ul>
+                        <li>AR Foundation (for environment scanning and tracking)</li>
+                        <li>Unity (for rendering and interaction)</li>
+                        <li>C# (for scripting logic)</li>
+                        <li>Android/iOS (for deployment)</li>
+                    </ul>
+
+                    <h4>Conclusion</h4>
+                    <p>
+                        This application demonstrates how augmented reality can be used to measure distances accurately in a real-world space.
+                    </p>
+                </div>
+            </section>
+        </article>
+    </div>
+    <!-- Scripts -->
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../../assets/js/skel.min.js"></script>
+    <script src="../../assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>

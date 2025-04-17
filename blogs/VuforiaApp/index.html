@@ -1,0 +1,145 @@
+-->
+<html>
+	<head>
+		<link rel="icon" href="">
+		<title>Setareh Soltanieh| Blog - SAIS </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                               tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+                               });
+        </script>
+        <script type="text/javascript"
+  			src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-97381584-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+
+		<style>
+		* {
+		  box-sizing: border-box;
+		}
+
+		.column {
+		  float: left;
+		  width: 50%;
+		  padding: 5px;
+		}
+
+		/* Clearfix (clear floats) */
+		.row::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+		</style>
+
+
+
+	</head>
+
+
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../../index.html">Setareh Soltanieh</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="../../index.html">Home</a></li>
+											<li><a href="../../index.html#aboutme">About Me</a></li>
+											<li><a href="../../index.html#experience">Experience</a></li>
+											<li>&mdash;</li>
+											<li><a href="../../publications.html">Projects</a></li>
+<!--											<li><a href="../index.html">Blog</a></li>-->
+<!--											<li><a href="../../datasets.html">Datasets</a></li>-->
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+        <article id="main">
+            <section class="wrapper style5">
+                <div class="inner">
+                    <h2 class="text-center">Anchoring Virtual Objects to 3D maps</h2>
+                    <p class="text-center"><strong>By Setareh Soltanieh</strong></p>
+                    <h4>Introduction</h4>
+                    <p>
+                        This project is an augmented reality (AR) application called <strong>Halloween AR</strong>.
+                        The goal is to anchor virtual Halloween-themed objects in a 3D map of my environment,
+                        allowing users to experience an interactive AR scene when they launch the app.
+                    </p>
+                     <h4>How It Works</h4>
+                    <p>
+                        1. I created a <strong>3D map</strong> of my environment using Vuforia.
+                        <br>
+                        2. I converted the generated map into a format that Unity could read.
+                        <br>
+                        3. Inside Unity, I placed virtual Halloween-themed objects into the mapped environment.
+                        <br>
+                        4. When users run the application, they see these virtual objects correctly positioned in the real world.
+                    </p>
+                    <h4>Video Demonstration</h4>
+                    <div class="text-center">
+                        <video width="70%" controls>
+                            <source src="./video/video_1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h4>Try It Yourself</h4>
+                    <p>
+                        This application utilizes a pre-generated 3D map of the kitchen environment in Queen's University's Ingenuity Labs.
+                        If you are present in that location, click below to download the application:
+                    </p>
+                    <p><a href="https://drive.google.com/file/d/17fokbYga0FIVLTr6fIL1Qqzh42Yv4mgJ/view?usp=sharing" class="button">Download APK</a></p>
+
+                    <h4>Technologies Used</h4>
+                    <ul>
+                        <li>Vuforia (for 3D environment mapping)</li>
+                        <li>Unity (for rendering and interaction)</li>
+                        <li>C# (for scripting behavior in Unity)</li>
+                        <li>Android/iOS (for deployment)</li>
+                    </ul>
+
+                    <h4>Conclusion</h4>
+                    <p>
+                        This project demonstrates how augmented reality can be used to place and interact with virtual objects
+                        in a real-world space.
+                    </p>
+
+                </div>
+            </section>
+        </article>
+    </div>
+    <!-- Scripts -->
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../../assets/js/skel.min.js"></script>
+    <script src="../../assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>
