@@ -1,11 +1,162 @@
----
-layout: default
-title: Hank Quinlan's Blog
----
-	<h1>{{ page.title }}</h1>
-	<ul class="posts">
+<!DOCTYPE HTML>
+<!--
+	Spectral by Pixelarity
+	pixelarity.com @pixelarity
+	License: pixelarity.com/license
+-->
+<html>
+	<head>
+		<link rel="icon" href="">
+		<title>Setareh Soltanieh | Blog </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
 
-	  {% for post in site.posts %}
-	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-	  {% endfor %}
-	</ul>
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../index.html">Setareh Soltanieh</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="../index.html">Home</a></li>
+											<li><a href="../index.html#aboutme">About Me</a></li>
+											<li><a href="../experience.html">Experience</a></li>
+											<li>&mdash;</li>
+											<li><a href="../publications.html">Projects</a></li>
+											<li><a href="../blog/index.html">Blog</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<article id="main">
+						<section class="wrapper style5">
+
+							<div class="inner">
+								<h2>
+								<center>
+									Blog
+								</center>
+								</h2>
+								
+								<p>
+								<center>
+									Thoughts, tutorials, and project write-ups.
+								</center>
+								</p>
+								
+								<p>  
+								</p>
+
+							    </br>
+							
+							</div>
+						</section>
+					</article>
+
+			<!-- Blog Posts -->
+			    <section id="blog-posts" class="wrapper alt style2">
+
+						<section class="spotlight">
+			        		<div class="image"><img src="../images/prepositioning.jpg" alt="Pre-positioning virtual objects" /></div><div class="content">
+							<h2><a href="../projects/PrepositioningAssets/index.html">Pre-positioning Virtual Objects at Their Intended Locations</a></h2>
+							<p style="text-align:left;">
+							Explores techniques for placing virtual objects at their intended real-world locations using AR technology.
+							</p>
+			        		</div>
+			        	</section>
+
+						<section class="spotlight">
+			        		<div class="image"><img src="../images/vase_placement.jpg" alt="Virtual vase placement" /></div><div class="content">
+							<h2><a href="../projects/PlacingObjectsInEnvironment/index.html">Positioning a Virtual Vase on Flat Surfaces</a></h2>
+							<p style="text-align:left;">
+							A guide to detecting flat surfaces in the environment and placing a virtual vase on them using AR anchoring.
+							</p>
+			        		</div>
+			        	</section>
+
+			        	<section class="spotlight">
+			        		<div class="image"><img src="../images/card_anchoring.jpg" alt="Card anchoring" /></div><div class="content">
+							<h2><a href="../projects/ARAnchoring/index.html">Anchoring Virtual Objects to Specific Cards</a></h2>
+							<p style="text-align:left;">
+							Demonstrates how to anchor virtual objects to specific playing cards using Unity's ARTrackedImageManager.
+							</p>
+			        		</div>
+			        	</section>
+
+			        	<section class="spotlight">
+			        		<div class="image"><img src="../images/halloween_ar.jpg" alt="Halloween AR" /></div><div class="content">
+							<h2><a href="../projects/VuforiaApp/index.html">Anchoring Virtual Objects to 3D Maps</a></h2>
+							<p style="text-align:left;">
+							Building a Halloween AR app that anchors virtual objects to a 3D map of your environment.
+							</p>
+			        		</div>
+			        	</section>
+
+						<section class="spotlight">
+			        		<div class="image"><img src="../images/flarpy_blorb.jpg" alt="Flarpy Blorb Game" /></div><div class="content">
+							<h2><a href="../projects/FlarpyBird/index.html">Flarpy Blorb Game</a></h2>
+							<p style="text-align:left;">
+							A 2D Unity game inspired by Flappy Bird, featuring dynamic obstacles, responsive physics, and progressive difficulty.
+							</p>
+			        		</div>
+			        	</section>
+
+			        	<section class="spotlight">
+			        		<div class="image"><img src="../images/ruler_ar.jpg" alt="AR Ruler" /></div><div class="content">
+							<h2><a href="../projects/Ruler/index.html">Distance Measurement AR Application</a></h2>
+							<p style="text-align:left;">
+							An AR application that measures the distance between two points in a real-world environment.
+							</p>
+			        		</div>
+			        	</section>
+
+			        	<section class="spotlight">
+			        		<div class="image"><img src="../images/disaster_tweets.jpg" alt="Disaster Tweets" /></div><div class="content">
+							<h2><a href="../projects/DisasterTweets/index.html">Disaster Tweet Classification</a></h2>
+							<p style="text-align:left;">
+							Using NLP techniques to classify tweets as real disaster-related messages or unrelated content, with Kaggle competitions.
+							</p>
+			        		</div>
+			        	</section>
+					
+			</section>
+		
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/setareh-soltanieh" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/setareh-soltanieh" class="icon fa-github"><span class="label">Github></span></a></li>
+							<li><a href="mailto:22ss75@queensu.ca" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

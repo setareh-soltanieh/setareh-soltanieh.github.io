@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<link rel="icon" href="">
-		<title>Setareh Soltanieh| Blog - DisasterTweets </title>
+		<title>Setareh Soltanieh| Blog - SAIS </title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -72,7 +72,7 @@
 											<li><a href="../../index.html#experience">Experience</a></li>
 											<li>&mdash;</li>
 											<li><a href="../../publications.html">Projects</a></li>
-<!--											<li><a href="../index.html">Blog</a></li>-->
+											<li><a href="../../blog/index.html">Blog</a></li>
 <!--											<li><a href="../../datasets.html">Datasets</a></li>-->
 										</ul>
 									</div>
@@ -83,39 +83,51 @@
         <article id="main">
             <section class="wrapper style5">
                 <div class="inner">
-                    <h2 class="text-center">Disaster Tweet Classification: Identifying Real Crisis Events from Social Media</h2>
+                    <h2 class="text-center">Distance Measurement AR Application</h2>
                     <p class="text-center"><strong>By Setareh Soltanieh</strong></p>
+                    <h4>Introduction</h4>
                     <p>
-                        This project explores Natural Language Processing (NLP) techniques to classify tweets as either real disaster-related messages or unrelated content. Using the "NLP Getting Started" dataset from Kaggle, which contains over 10,000 labeled tweets, the model is trained to distinguish between emergency-related and non-critical information.
+                        This project is an augmented reality (AR) application designed to measure the distance between two points in a real-world environment.
+                        Using AR technology, users can interactively specify two points and visualize the measured distance directly within their surroundings.
                     </p>
-                    <p>
-                        For my first attempt, which achieved a score of 0.78057, I took a straightforward yet effective approach to classifying disaster-related tweets.
-                    </p>
-                    <p>
-                        Feature Extraction: I used CountVectorizer, a simple yet powerful bag-of-words technique, to transform the raw text into numerical features. This method counts the frequency of each word in the training set and applies the same tokenization process to the test set, ensuring consistency in feature representation.
-                    </p>
-                    <p>
-                        Model Selection: I trained a RidgeClassifier, a linear model that is well-suited for text classification tasks due to its ability to handle high-dimensional sparse data efficiently. Ridge regression helps prevent overfitting by applying L2 regularization, making it a robust choice for this problem.
-                    </p>
-					<p>
-                    Despite its simplicity, this approach yielded a solid baseline score of 0.78057, demonstrating that even basic NLP techniques can provide competitive results in disaster tweet classification.
-                	</p>
-					<a href="https://www.kaggle.com/code/setarehsoltanieh/disastertweets-v1" target="_blank">View my Kaggle Notebook</a>
-					<p>
-						For my next attempt, I refined my approach and achieved an improved score of 0.80049 by making a key change in feature extraction.
-					</p>
-					<p>
-						Feature Extraction: Instead of CountVectorizer, I used TfidfVectorizer (Term Frequency-Inverse Document Frequency), another bag-of-words technique that assigns importance to words based on their frequency in a document relative to their occurrence in the entire dataset. This method downweights common words like "is" and "are" while emphasizing more meaningful words that contribute to distinguishing disaster-related tweets.
-					</p>
-					<p>
-						Model Selection: I continued using RidgeClassifier, as it had performed well in my previous attempt. By simply switching to TF-IDF features, the model learned a better representation of the text, leading to a noticeable improvement in performance.
-					</p>
-					<p>
-						This small yet effective change boosted my score to 0.80049, demonstrating the impact of better feature engineering in NLP tasks.
-					</p>
-					<a href="https://www.kaggle.com/code/setarehsoltanieh/disastertweets" target="_blank">View my Kaggle Notebook</a>
 
-				</div>
+                    <h4>How It Works</h4>
+                    <p>
+                        1. The user scans the environment to detect flat surfaces.
+                        <br>
+                        2. The user selects one endpoint by sending a raycast and placing a sphere at that location.
+                        <br>
+                        3. The second endpoint is specified by the user touching the screen, placing another sphere.
+                        <br>
+                        4. A line is drawn between the two spheres, and the distance is displayed along the line.
+                    </p>
+
+                    <h4>Video Demonstration</h4>
+                    <div class="text-center">
+                        <video width="70%" controls>
+                            <source src="distance_measurement_demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h4>Try It Yourself</h4>
+                    <p>
+                        Click below to download the application:
+                    </p>
+                    <p><a href="https://drive.google.com/file/d/1jFQT4GIM4g3nINN0i-W2ibCcWC8kG64-/view?usp=sharing" class="button">Download APK</a></p>
+
+                    <h4>Technologies Used</h4>
+                    <ul>
+                        <li>AR Foundation (for environment scanning and tracking)</li>
+                        <li>Unity (for rendering and interaction)</li>
+                        <li>C# (for scripting logic)</li>
+                        <li>Android/iOS (for deployment)</li>
+                    </ul>
+
+                    <h4>Conclusion</h4>
+                    <p>
+                        This application demonstrates how augmented reality can be used to measure distances accurately in a real-world space.
+                    </p>
+                </div>
             </section>
         </article>
     </div>
